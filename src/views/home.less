@@ -1,0 +1,112 @@
+@r: 1rem/75;
+.luckDraw {
+  width: 100%;
+  height: 1450*@r;
+  background: url("../images/home/home_bg.png") no-repeat center/cover;
+
+  .turntable-wrapper {
+    padding: 0 38*@r;
+    position: relative;
+    padding-top: 668*@r;
+
+    .luck-wrapper {
+      width: 516*@r;
+      height: 513*@r;
+      margin: 0 auto;
+      position: relative;
+
+      .nineGrid {
+        position: absolute;
+        top: 0*@r;
+        left: 50%;
+        margin-left: -256*@r;
+        width: 520*@r;
+        height: 520*@r;
+
+        li {
+          height: 160*@r;
+          display: flex;
+          margin: 8*@r 8*@r;
+
+          > div {
+            flex: 1;
+            height: 100%;
+            text-align: center;
+            position: relative;
+
+            .wrapper {
+              width: 160*@r;
+              height: 160*@r;
+              margin: 0;
+            }
+
+            img {
+              width: 160*@r;
+              height: 160*@r;
+            }
+
+            .mask {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 160*@r;
+              height: 160*@r;
+              opacity: 0.6;
+              border-radius: 5*@r;
+              background-color: #f65aab;
+              display: none;
+            }
+          }
+
+          > div.active {
+            .mask {
+              display: block;
+            }
+          }
+
+          > div.getLuck {
+            width: 160*@r;
+            height: 160*@r;
+            margin-right: 5*@r;
+          }
+        }
+
+        li:last-child {
+          margin-bottom: 5*@r;
+        }
+      }
+    }
+
+    .rule {
+      margin-top: 14*@r;
+      color: #fff;
+      font-size: 14*@r;
+      padding-bottom: 39*@r;
+
+      .rule-title {
+        text-align: center;
+        position: relative;
+        font-size: 16*@r;
+        margin-bottom: 14*@r;
+      }
+
+      .rule-title:before,
+      .rule-title:after {
+        content: '';
+        position: absolute;
+        top: 52%;
+        background: #fff;
+        width: 30%;
+        height: 1*@r;
+      }
+
+      .rule-title:before {
+        left: 0;
+      }
+
+      .rule-title:after {
+        right: 0;
+      }
+    }
+  }
+}
