@@ -86,7 +86,7 @@ export default {
       positionList: [],
     };
   },
-  created() {
+  mounted() {
     this._getHomeData();
   },
   methods: {
